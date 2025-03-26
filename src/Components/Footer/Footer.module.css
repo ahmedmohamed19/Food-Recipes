@@ -8,6 +8,7 @@
     bottom: 0;
 }
 
+/* ✅ ضبط الحاوية لتكون متجاوبة */
 .container {
     display: flex;
     flex-direction: column;
@@ -16,7 +17,7 @@
     margin: auto;
 }
 
-/* إعلان الخصم */
+/* ✅ إعلان الخصم */
 .discount {
     display: flex;
     align-items: center;
@@ -24,6 +25,8 @@
     width: 100%;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .discount p {
@@ -40,16 +43,21 @@
     color: green;
 }
 
-/* روابط الفوتر */
+/* ✅ جعل الروابط داخل الفوتر متجاوبة */
 .links {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 20px;
 }
 
+/* ✅ توزيع الأعمدة بشكل مناسب */
 .column {
     text-align: left;
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
 }
 
 .column h4 {
@@ -76,7 +84,7 @@
     color: #ff6600;
 }
 
-/* خط فاصل */
+/* ✅ خط فاصل */
 .divider {
     width: 100%;
     border: 0;
@@ -85,28 +93,38 @@
     margin-top: 20px;
 }
 
-/* أسفل الفوتر */
+/* ✅ أسفل الفوتر */
 .bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 10px;
 }
 
+/* ✅ زر الرجوع للأعلى */
 .backToTop {
     text-decoration: none;
     color: #ff6600;
     font-size: 14px;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 .backToTop:hover {
     color: black;
 }
 
-/* أيقونات السوشيال ميديا */
+/* ✅ أيقونات السوشيال ميديا */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .socialIcons a {
     color: black;
     font-size: 16px;
@@ -115,4 +133,23 @@
 
 .socialIcons a:hover {
     color: #ff6600;
+}
+
+/* ✅ ✨ جعل الفوتر متجاوب على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
