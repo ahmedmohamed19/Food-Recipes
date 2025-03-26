@@ -1,0 +1,118 @@
+.footer {
+    background-color: #fff;
+    color: #000;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* إعلان الخصم */
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.discount p {
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+}
+
+/* روابط الفوتر */
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.column {
+    text-align: left;
+}
+
+.column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column ul li {
+    margin-bottom: 5px;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.column ul li a:hover {
+    color: #ff6600;
+}
+
+/* خط فاصل */
+.divider {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* أسفل الفوتر */
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.backToTop {
+    text-decoration: none;
+    color: #ff6600;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+}
+
+.backToTop:hover {
+    color: black;
+}
+
+/* أيقونات السوشيال ميديا */
+.socialIcons a {
+    color: black;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.socialIcons a:hover {
+    color: #ff6600;
+}

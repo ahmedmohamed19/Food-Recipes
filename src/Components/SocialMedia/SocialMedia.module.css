@@ -1,0 +1,36 @@
+.socialIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+/* ألوان السوشيال ميديا */
+.socialIcons a:nth-child(1) {
+    color: #1877F2;
+}
+
+/* Facebook */
+.socialIcons a:nth-child(2) {
+    color: #1DA1F2;
+}
+
+/* Twitter */
+.socialIcons a:nth-child(3) {
+    color: #E4405F;
+}
+
+/* Instagram */
+.socialIcons a:nth-child(4) {
+    color: #FF0000;
+}
+
+/* YouTube */
+
+.socialIcons a:hover {
+    transform: scale(1.1);
+}

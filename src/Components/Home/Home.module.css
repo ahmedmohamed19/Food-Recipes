@@ -1,0 +1,19 @@
+.imageContainer {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.imageContainer img {
+    object-fit: cover;
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    background: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
