@@ -116,3 +116,23 @@
 .card:hover {
     transform: scale(1.03);
 }
+
+/* تعديل شكل اللينك */
+a {
+    text-decoration: none;
+    /* إزالة التسطير */
+    color: #333 !important;
+    /* لون داكن غير الأزرق */
+    transition: color 0.3s ease-in-out;
+}
+
+/* تأثير عند تمرير الماوس */
+a:hover {
+    color: #ff6f61 !important;
+    /* لون جذاب عند التحويم */
+}
+
+/* تأثير على العنوان عند تمرير الماوس */
+.card:hover h4 {
+    color: #ff6f61;
+}

@@ -1,0 +1,82 @@
+/* ✅ تنسيق العنوان الرئيسي */
+.recipeTitle {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff6f61, #ff9068);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ✅ تحسين شكل اسم الناشر */
+.publisher {
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
+}
+
+/* ✅ تحسين قائمة المكونات */
+.ingredientsList {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
+    background: #f8f9fa;
+    padding: 10px;
+}
+
+/* ✅ تحسين عنصر كل مكون */
+.ingredientItem {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* ✅ إضافة أيقونة للمكونات */
+.ingredientItem::before {
+    content: "🍽️";
+    margin-right: 10px;
+}
+
+/* ✅ تأثير عند التمرير */
+.ingredientItem:hover {
+    background-color: #ff7043;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* ✅ تحسين تصميم الصورة */
+.imageContainer img {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageContainer img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ تحسين زر الرجوع */
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff6f61;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.backButton:hover {
+    background: #d63b30;
+}

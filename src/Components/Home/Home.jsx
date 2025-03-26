@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Style from './Home.module.css';
 import main from '../../assets/main.avif';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     const [recipes, setRecipes] = useState([]);
@@ -50,10 +51,12 @@ export default function Home() {
                 {!loading && !error && recipes.map((recipe, index) => (
                     <div className="col-lg-4 col-md-6 col-12 p-4" key={index}>
                         <div className={`${Style.card} p-3 shadow-sm`}>
-                            <div className={Style.imageContainer}>
-                                <img className="w-100 h-100 rounded" src={recipe.image_url} alt={recipe.title} />
-                            </div>
-                            <h4 className="mt-3">{recipe.title}</h4>
+                            <Link to={`/specificrecipe/${recipe.recipe_id}`}>
+                                <div className={Style.imageContainer}>
+                                    <img className="w-100 h-100 rounded" src={recipe.image_url} alt={recipe.title} />
+                                </div>
+                                <h4 className="mt-3">{recipe.title}</h4>
+                            </Link>
                         </div>
                     </div>
                 ))}

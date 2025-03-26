@@ -56,31 +56,6 @@ export default function AllRecipes() {
     return (
         <div className="container">
             <div className="row d-flex">
-                {/* ✅ عمود الوصفات */}
-                <div className="col-lg-19 col-md-8 col-12">
-                    <h1 className={styles.recipeTitle}>All Recipes</h1>
-
-                    {loading && <p>Loading...</p>}
-                    {error && <p className="text-danger">{error}</p>}
-
-                    <div className="row"> {/* ✅ ضبط عرض الوصفات */}
-                        {!loading && !error && recipes.length > 0 ? (
-                            recipes.map((recipe, index) => (
-                                <div className="col-lg-4 col-md-6 col-12 p-2" key={index}>
-                                    <div className={`${styles.card} p-3 shadow-sm`}>
-                                        <div className={styles.imageContainer}>
-                                            <img className="w-100 h-100 rounded" src={recipe.image_url} alt={recipe.title} />
-                                        </div>
-                                        <h4 className="mt-3">{recipe.title}</h4>
-                                    </div>
-                                </div>
-                            ))
-                        ) : (
-                            !loading && !error && <p>No recipes found.</p>
-                        )}
-                    </div>
-                </div>
-
                 {/* ✅ عمود البحث - بنفس الطول */}
                 <div className="col-lg-3 col-md-4 col-12 d-flex flex-column">
                     <aside className="h-100">
@@ -105,6 +80,34 @@ export default function AllRecipes() {
                         </ul>
                     </aside>
                 </div>
+                {/* ✅ عمود الوصفات */}
+                <div className="col-lg-19 col-md-8 col-12">
+                    <h1 className={styles.recipeTitle}>All Recipes</h1>
+
+                    {loading && <p>Loading...</p>}
+                    {error && <p className="text-danger">{error}</p>}
+
+                    <div className="row justify-content-center"> {/* ✅ ضبط عرض الوصفات */}
+                        {!loading && !error && recipes.length > 0 ? (
+                            recipes.map((recipe, index) => (
+                                <div className="col-lg-4 col-md-6 col-12 p-2 " key={index}>
+                                    <Link to={`/specificrecipe/${recipe.recipe_id}`}>
+                                        <div className={`${styles.card} p-3 shadow-sm`}>
+                                            <div className={styles.imageContainer}>
+                                                <img className="w-100 h-100 rounded" src={recipe.image_url} alt={recipe.title} />
+                                            </div>
+                                            <h4 className="mt-3">{recipe.title}</h4>
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))
+                        ) : (
+                            !loading && !error && <p>No recipes found.</p>
+                        )}
+                    </div>
+                </div>
+
+
             </div>
         </div>
     );
